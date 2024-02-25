@@ -1,0 +1,20 @@
+{
+  "name": "hw-32-webpack_basic",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "hw-32-webpack_basic",
+      "version": "1.0.0",
+      "license": "ISC",
+      "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "css-loader": "^6.10.0",
+        "html-webpack-plugin": "^5.6.0",
+        "style-loader": "^3.3.4",
+        "webpack-cli": "^5.1.4"
+      }
+    }
+  }
+}
