@@ -1,9 +1,14 @@
 import * as $ from 'jquery';
-function createStatistics() {
-  let counter = 0;
-  let isDestroyed = false;
+function createStatistics(): {
+  getClicks: () => number | string;
+  destroy: () => string;
+} {
+  let counter: number = 0;
+  let isDestroyed: boolean = false;
   const listener = () => counter++;
-  $(document).addEventListener('click', listener);
+  
+  $(document).on('click', listener);
+  
   return {
     destroy() {
       $(document).off('click', listener);
@@ -16,4 +21,4 @@ function createStatistics() {
     },
   };
 }
-window.statistics = createStatistics();
+window['statistics'] = createStatistics();
